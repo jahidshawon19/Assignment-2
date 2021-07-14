@@ -1,0 +1,350 @@
+
+/****************************** GOOGLE FONTS **************** */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* *****************UNIVERSAL PROPERTIES *********************** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/******************** BANNER STYLE**********************  */
+.banner{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.banner-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:45px;
+    overflow: hidden;
+
+}
+.banner-text{
+    margin-top: 10%;
+    padding-left: 10%;
+}
+.banner-title{
+    margin-left: 1%;
+    font-size: 65px;
+    color:white;
+    
+}
+.banner-btn{
+    background-color: orange;
+    padding:8px;
+    color: white;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.banner-btn .fa-arrow-right{
+    margin-left: 8px;
+}
+.orangecolor{
+    color: orange;
+}
+.banner-image img{
+    margin-top: 10%;
+    width:100%;
+    height:70%;
+
+}
+
+
+.banner-container:hover .banner-text{
+    transform: rotate(-360deg);
+    transition: transform 2s ease;
+}
+
+.banner-container:hover .banner-image{
+    transform: rotate(360deg);
+    transition: transform 2s ease;
+}
+
+
+/**************************************** PLAYERS STYLE *************************************** */
+
+
+.player-container{
+    margin-top: 5%;
+    width:950px;
+   
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 10%;
+    grid-column-gap: 5%;
+}
+.single-player{
+    width:270px;  
+    height: 400px;
+    border: 8px solid #fff;
+    box-shadow: 10px 10px 30px rgb(212, 211, 211);
+    
+    
+}
+.player-img img{
+    width:250px;
+    height: 250px;
+    margin-bottom: 5px;
+    
+}
+
+.player-info{
+    padding-left: 10px;
+  
+}
+.player-title{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.player-desc{
+    color:rgb(177, 174, 174);
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+
+
+/******************************* NEWS STYLE ************************************************/
+.news-container{
+    margin-top: 22%;
+    width:950px;
+   
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 35px;
+    color: orange;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap:26px;
+}
+
+.single-news{
+    display: flex;
+}
+
+.single-news .thumbnail img{
+    width: 280px;
+    height: 180px ;
+    border-radius:5px;
+}
+.news-info{
+    margin-left: 16px;
+}
+.news-info a{
+    text-decoration: none;
+}
+.news-title{
+    font-size: 22px;
+    
+}
+
+/******************************* SPONSOR STYLE ************************************************/
+
+.sponsor-container{
+    margin-top: 8%;
+    width:950px;
+   
+}
+.sponsors{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.sponsor img{
+    height:80px;
+    width:100px;
+    border-radius: 50%;
+}
+
+
+/******************************* FOOTER STYLE ************************************************/
+
+footer{
+    margin-top: 8%;
+}
+
+.footer-image img{
+    width: 250px;
+}
+.social-icon{
+    display: flex;
+    
+}
+.icon img{
+    height:30px; 
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+/********************************************MEDIA QUERIES***************************************/ 
+
+/*##########################################
+            For Mobile Device 
+#############################################*/
+@media only screen and (max-width:688px){
+    .banner-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+
+    .banner-title{
+        margin-left: 1%;
+        font-size: 50px;
+     
+    }
+
+    .banner-image img{
+        margin-left: 5%;
+        height: 80%;
+    
+    }
+    .player-container, .news-container, .sponsor-container{
+        
+        width:100%;
+       
+    }
+    .players{
+        
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        
+    }
+    .single-player{
+        margin-top: 8%;
+    }
+
+    .news{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .single-news{
+        position: relative;
+        overflow: hidden;
+    }
+    .news-info{
+        position: absolute;
+        top: 0;
+    }
+    .news-title{
+        color:white;
+        text-align: center;
+    }
+
+    .single-news:hover .news-info{
+        display: block;
+        background-color: rgba(122, 108, 93, 0.651);
+    }
+    .single-news:hover .thumbnail{
+        transform: scale(1.5) rotate(360deg);
+        transition: transform 2s ease;
+    }
+
+    .sponsors{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sponsor img{
+        margin-top: 5%;
+    }
+ 
+}
+
+
+/*##########################################
+            For Tablet Device  (set one column)
+#############################################*/
+
+
+@media only screen and (min-width:668px) and (max-width:992px){
+    .banner-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+    .banner-title{
+        margin-left: 1%;
+        font-size: 50px;
+     
+    }
+
+    .banner-image img{
+        margin-left: 5%;
+        height: 80%;
+    
+    }
+
+    .player-container, .news-container, .sponsor-container{
+        
+        width:100%;
+       
+    }
+    .players, .news, .sponsors{
+        
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        
+    }
+    .single-player{
+        margin-top: 8%;
+    }
+    .single-news{
+        position: relative;
+        overflow: hidden;
+    }
+    .news-info{
+        position: absolute;
+        top: 0;
+    }
+    .news-title{
+        color:white;
+        text-align: center;
+    }
+
+    .single-news:hover .news-info{
+        display: block;
+        background-color: rgba(122, 108, 93, 0.651);
+    }
+    .single-news:hover .thumbnail{
+        transform: scale(1.5) rotate(360deg);
+        transition: transform 2s ease;
+    }
+
+    .sponsor img{
+        margin-top: 5%;
+    }
+ 
+}
